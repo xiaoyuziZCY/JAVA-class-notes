@@ -1,0 +1,113 @@
+11月16日晚Java培训01课程笔记
+
+
+1、源文件:使用高级编程语言的语法编写的开发者可以看懂的文件，此时计算机无法执行, 源文件以.java扩展名进行结尾
+2、字节码文件：通过编译命令，对源文件进行编译，编译为.class文件，此时计算机可以识别并加载该文件，将class文件加载到内存中进行执行.
+3、javac: 编译命令
+4、JVM：java virtual machine, java虚拟机，加载并执行编译后的字节码文件
+   JRE: Java Runtime Environment，运行时环境。
+   JDK：java development kit,java 集成环境
+5、环境变量：
+	JAVA_HOME:jdk的安装路径
+	CLASSPATH：当前路径,用.表示
+	PATH: 配置jdk目录/bin/java.exe、javac.exe
+
+6、基础dos命令、linux命令
+	Linux操作手册
+7、public :公共的，公开的
+	Java：一个java文件,其文件名必须与该文件中的公共类的类名一样。
+
+8、Java语言的程序结构：
+	package 包名;
+
+	import 代码块;
+
+	public class Demo{
+		//入口函数
+		public static void main(String []args){
+
+		}
+		...
+	}
+
+9、类的全名：包名.类名
+
+10、包名的命名规则: 往往使用三级目录 + 功能目录
+	例如：com.alibaba.fastjson
+
+	cn.公司名称.项目名称.功能目录
+		功能目录：model、view、controller、dao、daoimpl...
+
+11、编码习惯：
+	① 代码格式缩进: tab
+	② 代码注释:
+		//:单行注释
+		/* ... */ : 多行注释
+		/** ... */ : 文档注释、文档不参与编译
+12、关键字、保留字:
+
+13、变量的命令格式：
+	数据类型 变量名称;
+
+	Java是强类型语言：数据类型和变量的类型需要保持一致， = 两边要类型一致。
+
+14、八种基本数据类型：char、short、int、long、float、double、boolean、String
+
+15、ASCII编码：
+	0-9：48
+	A-Z: 65
+	a-z: 97 - 122
+
+16、转义字符：\字符
+	\n：换行
+	\t：制表
+	\\：反斜线
+	\': 单引号
+	\": 双引号
+
+17、数据类型转换原则：
+	前台：两种类型需要兼容
+	自动转换：目标类型 > 源类型
+	强制转换：目标类型 < 源类型
+18、运算符：
+	算术运算符：+ - * / % ++ -- 
+	逻辑运算符：
+		&&：全真则真，一假则假
+		||：一真为真，全假则假
+		!：取反
+
+	位运算符
+	赋值运算符：= += -= 。。。 %= 
+	关系运算符：> < >= <= == != 
+	三元运算符：? : 
+
+19、Scanner包名：java.util.Scanner;
+	
+
+20、Java中的选择结构与分支结构：
+	选择结构：if、 if else 、 if else if 。。 
+	if (boolean){
+		选择体
+	}
+
+21、变量的作用域：局部变量、全局变量
+	
+22、Java语言中的循环结构体：
+	for (表达式1；表达式2; 表达式3){
+		...
+	}
+
+	//满足表达式条件时，执行
+	while( boolean){
+	 ...
+	}
+
+	//先执行一次，然后再进行判断
+	do{... } while(。。)
+
+	循环的控制：break, contine, goto
+
+
+
+
+
