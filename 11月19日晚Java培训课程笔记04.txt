@@ -1,0 +1,109 @@
+11月19日晚Java培训课程笔记
+
+一、常用的API：
+1、Object：
+	getClass:获取实例的类型
+	hashCode：对象的十进制的hash值
+	toString：对象的字符串表示
+	equals：默认比较两个对象的地址；可以通过重写该方法来实现自定义逻辑
+	finalize:垃圾回收方法.
+
+2、垃圾回收机制：存在垃圾回收线程，会自动进行垃圾扫描及回收
+	System.gc()；
+3、包装类：
+	byte --> Byte
+	int  --> Integer
+
+ ① 八种基本数据类型都有对象引用数据类型
+ ② 包装类都是final修饰，无法被继承
+ parse：解析
+ xml解析:
+
+4、String：字符串类，final修饰, “”中包裹的均为字符串
+常用的api及操作：
+ ① 长度: int length()
+ ② 截取: subString
+ ③ 替换: repleace()
+ ④ 切割: split()
+ ⑤ 大小写: toUpperCase、toLowerCase
+ ⑥ 获取某个位置上的字符内容：char charAt(int)
+ ⑦ 去空格:trim()
+ ⑧ 包含判断: boolean contains
+ ⑨ 判断某个子串第一次出现的位置：int indexOf(String)
+ 10 字符串：+ 、append
+
+StringBuilder：采用了build设计模式的字符串类
+StringBuffer：带有缓冲区的字符串类
+
+5、BigDecimal：大整数类，用于进行精确的浮点数计算
+特点：不能直接进行相加减，需要通过方法调用来实现,包括比较大小
+big.compareTo：返回int类型，3个数，-1，0，+1
+
+6、集合：本质是容器，用于存储数据
+List: 列表，接口, 可以存储不同类型的数据，长度可变，有序的
+	具体实现：
+		ArrayList: 底层实现是数组
+		LinkedList:链表
+		Vector:
+	方法：add、addAll、get、subList、size()
+Map：映射关系， key --> value, key为键，value为值, 无序
+	key：保持唯一
+	value：可以相同
+Set：无序，会通过默认的规则进行排序, 可以通过自定义排序规则
+
+7、泛型:通过类型声明对数据类型加以限制
+	List<String> l1 = new ArrayList<String>();
+	注意点：基本数据类型不能用在泛型声明中:
+		List<int> l2 = new ArrayList<int>() 错误
+
+8、Collections工具类：java.util.*;
+	reverse：反转所有元素的顺序
+	sort:进行升序排序。硬性要求：要排序的实例对象必须要实现Comparable接口
+		int compareTo(Object o) 
+
+9、异常的处理：
+	异常的分类：ERROR、Execption
+	Exception:
+		ChekedExecption：检查异常,编译器异常
+		RuntimeExecption:运行时异常
+			处理方案:
+				① 自己不解决，抛给其他人：throws 
+				② 自己解决: 
+					try{
+						代码1
+					}catch(xxxException e){
+						代码2
+					}finally{ 
+						代码3
+					}
+				执行情况：
+					代码1一定执行
+					代码2可能执行:遇到错误的时候执行
+					代码3:一定执行
+			简答题：列举出常见的运行时异常，至少5个
+				ArrayIndexOutofBondsExecption
+				NullPiontException
+				ClassNotFoundException
+				ClassCastException
+				IOException
+
+10、线程:Thread
+	new Thread(new Runnable(){
+		public void run(){
+			todo..
+		}
+	}).start()：启动一个线程
+	注意一点：一个线程只能执行一遍,按照生命周期状态进行先后执行
+	生命周期：程序的生老病死
+	Runnable:接口,其中包含一个run方法，用于实现线程所要执行的任务逻辑.
+
+11、问题: 多线程下的线程安全问题
+解决方案:
+	① synchronized:同步代码块
+	② 锁：互斥锁、读写锁	
+		互斥锁：Lock、Unlock
+		读写锁：
+
+
+
+
